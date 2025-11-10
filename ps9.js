@@ -29,7 +29,8 @@ db.Student.find({
 },
 {
     _id:0,
-    Roll_No:1
+    Roll_No:1,
+    Class:1
 });
 
 //query 3
