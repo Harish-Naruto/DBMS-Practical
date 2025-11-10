@@ -21,7 +21,7 @@ create table Account (
     BranchID int,
     CustID int,
     date_open date,
-    Account_type varchar(10),
+    Account_type varchar(50),
     Balance decimal(10,2),
     foreign key (BranchID) references Branch(BranchID) on delete cascade,
     foreign key (CustID) references Customer(CustID) on delete cascade

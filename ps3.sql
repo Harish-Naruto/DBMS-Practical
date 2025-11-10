@@ -79,12 +79,12 @@ SELECT * FROM Employee;
 -- Query 1
 select concat(e.First_name," ",e.Last_name) as name ,e.Salary,d.department_name from Employee e
 join Departments d on d.department_id = e.department_id
-where Salary >= (select avg(Salary) from Employee) and d.department_id = 'IT';
+where Salary >= (select avg(Salary) from Employee) and d.department_name = 'IT';
 
 -- Query 2
 select concat(e.First_name," ",e.Last_name) as name ,e.Salary, d.department_name from Employee e
 join Departments d on d.department_id = e.department_id
-where Salary = (
+where e.Salary = (
     select min(Salary) from Employee 
     where department_id = d.department_id
 );
